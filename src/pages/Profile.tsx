@@ -47,12 +47,17 @@ export const Profile = (): JSX.Element => {
 
   return (
     <div className="bg-[#efeff8] flex flex-row justify-center w-full min-h-screen">
-      <div className="bg-[#efeff8] w-full max-w-[1340px] relative py-[117px] px-[115px] h-fit">
+      <div className="bg-[#efeff8] w-full max-w-[1340px] relative py-[117px] h-fit">
         {/* Side Navigation */}
         <SideBar />
         <FormProvider {...form}>
           {/* Profile Section */}
-          <div className="relative w-full h-[1250px]">
+          <div
+            className="relative w-full h-[1250px] left-[159px]"
+            style={{
+              width: "calc(100% - 200px)",
+            }}
+          >
             {/* Profile Avatar */}
             <div className="relative flex justify-center z-10">
               <div className="w-[241px] h-[241px] bg-white rounded-[120.5px] flex items-center justify-center">

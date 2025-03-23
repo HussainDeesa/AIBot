@@ -6,6 +6,7 @@ import { Dashboard } from "@pages/Dashboard";
 import { Journal } from "@pages/Journal";
 import { Profile } from "@pages/Profile";
 import { JournalCreate } from "@pages/JournalCreate";
+import { Chat } from "@pages/Chat";
 
 const Routes = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const Routes = createBrowserRouter([
   {
     path: "/journal/create",
     element: <JournalCreate />,
+  },
+  {
+    path: "/chat",
+    element: <Chat />,
   },
   {
     path: "/profile",
