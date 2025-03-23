@@ -4,6 +4,7 @@ import { LoginSignUp } from "./pages/LoginSignUp";
 import { Login } from "./pages/Login";
 import { Dashboard } from "@pages/Dashboard";
 import { Journal } from "@pages/Journal";
+import { Profile } from "@pages/Profile";
 
 const Routes = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const Routes = createBrowserRouter([
   {
     path: "/journal",
     element: <Journal />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
 ]);
 

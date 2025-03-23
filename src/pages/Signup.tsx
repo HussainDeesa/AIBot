@@ -4,7 +4,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { FormInput } from "../components/FormInput";
 import { FormSelect } from "../components/FormSelect";
 import { GENDER } from "../constants";
-import { FormCalendar } from "../components/FormCalednar";
+import { FormCalendar } from "../components/FormCalendar";
 import { Button } from "../components/ui/button";
 
 export const Signup = (): JSX.Element => {

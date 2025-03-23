@@ -28,6 +28,7 @@ export const SideBar = () => {
         className={`left-[21px] cursor-pointer  ${
           location.pathname === "/chat" ? selectedClass : ""
         }`}
+        onClick={() => navigate("/chat")}
       >
         <MessageSquare className="w-6 h-6" />
       </div>
@@ -35,6 +36,7 @@ export const SideBar = () => {
         className={`left-[21px] cursor-pointer  ${
           location.pathname === "/profile" ? selectedClass : ""
         }`}
+        onClick={() => navigate("/profile")}
       >
         <User className="w-6 h-6" />
       </div>

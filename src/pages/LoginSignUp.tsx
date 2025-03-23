@@ -19,7 +19,7 @@ export const LoginSignUp = (): JSX.Element => {
         <div className="flex flex-col h-full items-center justify-center gap-[70px]">
           <h1 className="font-bold text-[#3e3a63] text-[34px]">Hi There,</h1>
 
-          <div className="max-h-[450px]">
+          <div className="max-h-[450px] max-w-[700px]">
             <img alt="Login illustration" src={LoginVector} />
           </div>
 

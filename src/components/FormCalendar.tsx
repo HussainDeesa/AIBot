@@ -5,15 +5,11 @@ import {
   useFormContext,
 } from "react-hook-form";
 import { Calendar as CalendarIcon } from "lucide-react";
-import { FormField, FormItem } from "../components/ui/form";
+import { FormField, FormItem } from "./ui/form";
 import { format } from "date-fns";
 import { Calendar } from "./ui/calendar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "../components/ui/popover";
-import { Button } from "../components/ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Button } from "./ui/button";
 import { useEffect } from "react";
 import { Label } from "./ui/label";
 
@@ -26,6 +22,7 @@ interface FormCalendar<T extends FieldValues> {
   iconColor?: string;
   className?: string;
   fieldClassName?: string;
+  disabled?: boolean;
 }
 
 export const FormCalendar = <T extends FieldValues>({
@@ -37,6 +34,7 @@ export const FormCalendar = <T extends FieldValues>({
   className,
   disabledAt,
   fieldClassName,
+  disabled,
 }: FormCalendar<T>) => {
   const { control } = useFormContext<T>();
   const { field } = useController({ name, control });
@@ -55,12 +53,13 @@ export const FormCalendar = <T extends FieldValues>({
         render={({ field, fieldState }) => (
           <FormItem className="flex flex-col">
             <Popover modal onOpenChange={(open) => !open && field.onBlur()}>
-              <PopoverTrigger asChild>
+              <PopoverTrigger asChild disabled={disabled}>
                 <Button
                   variant={"outline"}
                   className={`flex h-12 w-full rounded-full !p-[21px] text-sm font-[400] border-[1px] border-border !placeholder:text-placeholder placeholder:font-normal file:text-sm file:font-medium focus:border-[1px] focus:border-[#1551B2] disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none hover:bg-white bg-white ${
                     fieldClassName ?? ""
                   }`}
+                  disabled={disabled}
                 >
                   {field.value ? (
                     format(field.value, "MM/dd/yyyy")

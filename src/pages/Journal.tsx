@@ -123,7 +123,7 @@ export const Journal = () => {
         </main>
 
         {/* Floating action button */}
-        <div className="fixed cursor-pointer flex w-[113px] h-[113px] bottom-[22px] right-[33px] bg-white hover:bg-white text-black rounded-full border border-solid border-[#9d9cb5] items-center justify-center">
+        <div className="fixed cursor-pointer flex w-[113px] h-[113px] bottom-[22px] right-[33px] bg-white hover:bg-white text-black rounded-full border border-solid border-[#9d9cb5] items-center justify-center hover:bg-accent hover:text-accent-foreground">
           <Plus width={50} height={50} />
         </div>
       </div>
