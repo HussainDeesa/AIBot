@@ -2,11 +2,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle, Circle } from "lucide-react";
 import { JSX, useState } from "react";
-import MenIllustration from "@/assets/menIllustration.png";
-import FemaleIllustration from "@/assets/womenIllustration.png";
-import SittingIllustration from "@/assets/sittingIllustration.png";
-import MeditationIllustration from "@/assets/medidationIllustration.png";
-import WalkingIllustration from "@/assets/walkingIllustration.png";
+import MenIllustration from "@/assets/menIllustration.svg";
+import FemaleIllustration from "@/assets/womenIllustration.svg";
+import SittingIllustration from "@/assets/sittingIllustration.svg";
+import MeditationIllustration from "@/assets/medidationIllustration.svg";
+import WalkingIllustration from "@/assets/walkingIllustration.svg";
 import { SideBar } from "./SideBar";
 
 export const Dashboard = (): JSX.Element => {

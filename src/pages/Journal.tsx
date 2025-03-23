@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, ChevronRight, Plus } from "lucide-react";
 import { SideBar } from "./SideBar";
+import { useNavigate } from "react-router-dom";
 
 // Journal entry data for mapping
 const journalEntries = [
@@ -67,6 +68,7 @@ const journalEntries = [
 ];
 
 export const Journal = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#efeff8] flex flex-row justify-center w-full min-h-screen">
       <div className="bg-[#efeff8] w-full min-h-screen relative overflow-hidden">
@@ -123,7 +125,10 @@ export const Journal = () => {
         </main>
 
         {/* Floating action button */}
-        <div className="fixed cursor-pointer flex w-[113px] h-[113px] bottom-[22px] right-[33px] bg-white hover:bg-white text-black rounded-full border border-solid border-[#9d9cb5] items-center justify-center hover:bg-accent hover:text-accent-foreground">
+        <div
+          className="fixed cursor-pointer flex w-[113px] h-[113px] bottom-[22px] right-[33px] bg-white hover:bg-white text-black rounded-full border border-solid border-[#9d9cb5] items-center justify-center hover:bg-accent hover:text-accent-foreground"
+          onClick={() => navigate("create")}
+        >
           <Plus width={50} height={50} />
         </div>
       </div>

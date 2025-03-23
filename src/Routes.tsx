@@ -5,6 +5,7 @@ import { Login } from "./pages/Login";
 import { Dashboard } from "@pages/Dashboard";
 import { Journal } from "@pages/Journal";
 import { Profile } from "@pages/Profile";
+import { JournalCreate } from "@pages/JournalCreate";
 
 const Routes = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const Routes = createBrowserRouter([
   {
     path: "/journal",
     element: <Journal />,
+  },
+  {
+    path: "/journal/create",
+    element: <JournalCreate />,
   },
   {
     path: "/profile",
