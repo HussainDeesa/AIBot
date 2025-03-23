@@ -58,7 +58,7 @@ export const FormCalendar = <T extends FieldValues>({
               <PopoverTrigger asChild>
                 <Button
                   variant={"outline"}
-                  className={`flex h-12 w-full rounded-full !p-[21px] text-sm font-[400] border-[1px] border-bordercolor !placeholder:text-placeholder placeholder:font-normal file:text-sm file:font-medium focus:border-[1px] focus:border-[#1551B2] disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none hover:bg-white bg-white ${
+                  className={`flex h-12 w-full rounded-full !p-[21px] text-sm font-[400] border-[1px] border-border !placeholder:text-placeholder placeholder:font-normal file:text-sm file:font-medium focus:border-[1px] focus:border-[#1551B2] disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none hover:bg-white bg-white ${
                     fieldClassName ?? ""
                   }`}
                 >

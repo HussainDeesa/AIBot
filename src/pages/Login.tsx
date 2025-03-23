@@ -3,8 +3,10 @@ import LoginBanner from "../assets/loginBanner.png";
 import { FormProvider, useForm } from "react-hook-form";
 import { FormInput } from "../components/FormInput";
 import { Button } from "../components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export const Login = (): JSX.Element => {
+  const navigate = useNavigate();
   const form = useForm({
     mode: "onBlur",
   });
@@ -46,6 +48,7 @@ export const Login = (): JSX.Element => {
                   <Button
                     className="w-full bg-transparent text-black !rounded-full !h-14 !font-normal !text-[24px] border border-solid !border-[#2f2e41] "
                     variant="outline"
+                    onClick={() => navigate("/dashboard")}
                   >
                     Login
                   </Button>
